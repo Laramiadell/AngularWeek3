@@ -1,0 +1,25 @@
+<div class="row">
+      <div class="col-md-8">
+        <div class="card mt-3">
+          <div class="card-header bg-primary text-black">
+            <h2>{{ title }}
+             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+             <button class="btn-light btn-bg" (click)="filterGender('Female')">F</button>
+             &nbsp;<button class="btn-light btn-bg" (click)="filterGender('Male')">M</button>
+             &nbsp;<button class="btn-light btn-bg" (click)="showAll()">A</button>
+            </h2>
+          </div>
+          <div class="card-body text-secondary">
+            <table class="card-table table">
+              <tbody>
+                <tr *ngFor="let participant of display">
+                  <td>{{participant.name}}</td>
+                  <td>{{participant.age}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
