@@ -9,18 +9,18 @@ import { ParticipantService } from './participant.service';
 export class ParticipantComponent{
   title = 'List of Participants';
   participants;
-  display;
+  present;
 
   constructor(service: ParticipantService) {
-    this.display = this.participants = service.getParticipants();
+    this.present = this.participants = service.getParticipants();
   }
 
-  showAll(){
-    this.display = this.participants
+  all(){
+    this.present = this.participants
   }
 
-  filterGender(gender: string){
-    this.display = this.participants.filter(participant => participant.gender === gender)
+  sort(gender: string){
+    this.present = this.participants.filter(participant => participant.gender === gender)
   }
 
 }
